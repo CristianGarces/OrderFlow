@@ -10,14 +10,15 @@
         "dependencies": {
           "Aspire.Dashboard.Sdk.win-x64": "9.5.0",
           "Aspire.Hosting.AppHost": "9.5.0",
-          "Aspire.Hosting.Orchestration.win-x64": "9.5.0"
+          "Aspire.Hosting.Orchestration.win-x64": "9.5.0",
+          "Aspire.Hosting.PostgreSQL": "9.5.2"
         },
         "runtime": {
           "Tienda.dll": {}
         }
       },
       "Aspire.Dashboard.Sdk.win-x64/9.5.0": {},
-      "Aspire.Hosting/9.5.0": {
+      "Aspire.Hosting/9.5.2": {
         "dependencies": {
           "AspNetCore.HealthChecks.Uris": "9.0.0",
           "Google.Protobuf": "3.32.0",
@@ -45,8 +46,8 @@
         },
         "runtime": {
           "lib/net8.0/Aspire.Hosting.dll": {
-            "assemblyVersion": "9.5.0.0",
-            "fileVersion": "9.500.25.47407"
+            "assemblyVersion": "9.5.2.0",
+            "fileVersion": "9.500.225.52203"
           }
         },
         "resources": {
@@ -94,7 +95,7 @@
       "Aspire.Hosting.AppHost/9.5.0": {
         "dependencies": {
           "AspNetCore.HealthChecks.Uris": "9.0.0",
-          "Aspire.Hosting": "9.5.0",
+          "Aspire.Hosting": "9.5.2",
           "Google.Protobuf": "3.32.0",
           "Grpc.AspNetCore": "2.71.0",
           "Grpc.Net.ClientFactory": "2.71.0",
@@ -126,6 +127,53 @@
         }
       },
       "Aspire.Hosting.Orchestration.win-x64/9.5.0": {},
+      "Aspire.Hosting.PostgreSQL/9.5.2": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.NpgSql": "9.0.0",
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
+          "Aspire.Hosting": "9.5.2",
+          "Google.Protobuf": "3.32.0",
+          "Grpc.AspNetCore": "2.71.0",
+          "Grpc.Net.ClientFactory": "2.71.0",
+          "Grpc.Tools": "2.72.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.3.0",
+          "KubernetesClient": "17.0.14",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "8.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.20",
+          "Microsoft.Extensions.Hosting": "8.0.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Http": "8.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Microsoft.Extensions.Primitives": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Polly.Core": "8.6.3",
+          "Semver": "3.0.0",
+          "StreamJsonRpc": "2.22.11",
+          "System.IO.Hashing": "9.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.PostgreSQL.dll": {
+            "assemblyVersion": "9.5.2.0",
+            "fileVersion": "9.500.225.52203"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.NpgSql/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.20",
+          "Npgsql": "8.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.NpgSql.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
       "AspNetCore.HealthChecks.Uris/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.20",
@@ -770,6 +818,17 @@
           }
         }
       },
+      "Npgsql/8.0.3": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/Npgsql.dll": {
+            "assemblyVersion": "8.0.3.0",
+            "fileVersion": "8.0.3.0"
+          }
+        }
+      },
       "Polly.Core/8.6.3": {
         "runtime": {
           "lib/net8.0/Polly.Core.dll": {
@@ -894,12 +953,12 @@
       "path": "aspire.dashboard.sdk.win-x64/9.5.0",
       "hashPath": "aspire.dashboard.sdk.win-x64.9.5.0.nupkg.sha512"
     },
-    "Aspire.Hosting/9.5.0": {
+    "Aspire.Hosting/9.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Gp+fpt4yXxQpcp+s5Jx9YwMbk1WR8QA+5CvPod4Npf2Ot4i5K0cQz1S2e1QKXl0uC/P2ZfEysNl7YoNxIWlZmw==",
-      "path": "aspire.hosting/9.5.0",
-      "hashPath": "aspire.hosting.9.5.0.nupkg.sha512"
+      "sha512": "sha512-CQLIzx6zkQCuok+CHjrj3sEVlP6/elJwnWdkJComkAkQvp82ASPwiUDPF84bt5rO9SBwRqeej7HpFMLoL55fhQ==",
+      "path": "aspire.hosting/9.5.2",
+      "hashPath": "aspire.hosting.9.5.2.nupkg.sha512"
     },
     "Aspire.Hosting.AppHost/9.5.0": {
       "type": "package",
@@ -914,6 +973,20 @@
       "sha512": "sha512-Je/9Fu0TF25LJ3R/bakoNZQtvp+xT6GIO8I+RHWm8w5ossesj0eUeJu/5HrWhKrXEFK89LihSEt3ATQh5k7AcQ==",
       "path": "aspire.hosting.orchestration.win-x64/9.5.0",
       "hashPath": "aspire.hosting.orchestration.win-x64.9.5.0.nupkg.sha512"
+    },
+    "Aspire.Hosting.PostgreSQL/9.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ap/Ltivs9fPhkssyTIuLlQEIl3SGodcULK1T5CAxMVL7OuwjeB1GqU5vkcfxfjZbpVpdcqAQD2tPrx2u34JZuQ==",
+      "path": "aspire.hosting.postgresql/9.5.2",
+      "hashPath": "aspire.hosting.postgresql.9.5.2.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.NpgSql/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-npc58/AD5zuVxERdhCl2Kb7WnL37mwX42SJcXIwvmEig0/dugOLg3SIwtfvvh3TnvTwR/sk5LYNkkPaBdks61A==",
+      "path": "aspnetcore.healthchecks.npgsql/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512"
     },
     "AspNetCore.HealthChecks.Uris/9.0.0": {
       "type": "package",
@@ -1285,6 +1358,13 @@
       "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "path": "newtonsoft.json/13.0.3",
       "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
+    },
+    "Npgsql/8.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6WEmzsQJCZAlUG1pThKg/RmeF6V+I0DmBBBE/8YzpRtEzhyZzKcK7ulMANDm5CkxrALBEC8H+5plxHWtIL7xnA==",
+      "path": "npgsql/8.0.3",
+      "hashPath": "npgsql.8.0.3.nupkg.sha512"
     },
     "Polly.Core/8.6.3": {
       "type": "package",

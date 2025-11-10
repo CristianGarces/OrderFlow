@@ -120,3 +120,6 @@ C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.genruntimeconfig.cache
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\ref\Tienda.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Aspire\references\Tienda_Identity.ProjectMetadata.g.cs
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.PostgreSQL.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.NpgSql.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Npgsql.dll

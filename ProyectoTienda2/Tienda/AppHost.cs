@@ -1,9 +1,12 @@
+using Aspire.Hosting;
+
 var builder = DistributedApplication.CreateBuilder(args);
 
-// Agregar la conexión a tu PostgreSQL existente
-var postgres = builder.AddConnectionString("PostgreSQL");
+// Para la base de datos
+var postgres = builder.AddPostgres("postgres");
+var postgresdb = postgres.AddDatabase("identityDb");
 
 // Agregar tu proyecto Identity
-var identity = builder.AddProject<Projects.Tienda_Identity>("tienda-identity");
+var identity = builder.AddProject<Projects.Tienda_Identity>("tienda-identity").WithReference(postgresdb);
 
 builder.Build().Run();
