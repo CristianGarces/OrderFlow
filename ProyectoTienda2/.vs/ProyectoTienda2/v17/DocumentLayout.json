@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7084A413-CA24-BD9A-7749-86A523C5F1CD}|Tienda.Identity\\Tienda.Identity.csproj|c:\\users\\usuario\\documents\\github\\orderflow\\proyectotienda2\\tienda.identity\\data\\identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084A413-CA24-BD9A-7749-86A523C5F1CD}|Tienda.Identity\\Tienda.Identity.csproj|solutionrelative:tienda.identity\\data\\identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084A413-CA24-BD9A-7749-86A523C5F1CD}|Tienda.Identity\\Tienda.Identity.csproj|c:\\users\\usuario\\documents\\github\\orderflow\\proyectotienda2\\tienda.identity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084A413-CA24-BD9A-7749-86A523C5F1CD}|Tienda.Identity\\Tienda.Identity.csproj|solutionrelative:tienda.identity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084A413-CA24-BD9A-7749-86A523C5F1CD}|Tienda.Identity\\Tienda.Identity.csproj|c:\\users\\usuario\\documents\\github\\orderflow\\proyectotienda2\\tienda.identity\\data\\identitydbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084A413-CA24-BD9A-7749-86A523C5F1CD}|Tienda.Identity\\Tienda.Identity.csproj|solutionrelative:tienda.identity\\data\\identitydbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{37CD7547-C99D-4D12-926F-51699B772C9B}|Tienda\\Tienda.csproj|c:\\users\\usuario\\documents\\github\\orderflow\\proyectotienda2\\tienda\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37CD7547-C99D-4D12-926F-51699B772C9B}|Tienda\\Tienda.csproj|solutionrelative:tienda\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,27 +43,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\appsettings.json",
-              "RelativeDocumentMoniker": "Tienda.Identity\\appsettings.json",
-              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\appsettings.json",
-              "RelativeToolTip": "Tienda.Identity\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-10T18:29:57.651Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\Program.cs",
+              "RelativeDocumentMoniker": "Tienda.Identity\\Program.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\Program.cs",
+              "RelativeToolTip": "Tienda.Identity\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T18:35:24.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IdentityDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\Data\\IdentityDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Tienda.Identity\\Data\\IdentityDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\Data\\IdentityDbContextFactory.cs",
+              "RelativeToolTip": "Tienda.Identity\\Data\\IdentityDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T18:35:14.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IdentityDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\Data\\IdentityDbContext.cs",
+              "RelativeDocumentMoniker": "Tienda.Identity\\Data\\IdentityDbContext.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\Data\\IdentityDbContext.cs",
+              "RelativeToolTip": "Tienda.Identity\\Data\\IdentityDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T18:34:27.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\appsettings.json",
+              "RelativeDocumentMoniker": "Tienda.Identity\\appsettings.json",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda.Identity\\appsettings.json",
+              "RelativeToolTip": "Tienda.Identity\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-11T17:40:00.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AppHost.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda\\AppHost.cs",
               "RelativeDocumentMoniker": "Tienda\\AppHost.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\OrderFlow\\ProyectoTienda2\\Tienda\\AppHost.cs",
               "RelativeToolTip": "Tienda\\AppHost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T16:53:48.438Z",
+              "WhenOpened": "2025-11-11T17:34:12.329Z",
               "EditorCaption": ""
             }
           ]

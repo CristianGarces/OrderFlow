@@ -5,6 +5,11 @@ C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Tienda.pdb
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.AppHost.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.NodeJs.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.PostgreSQL.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.Redis.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.NpgSql.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.Redis.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.Uris.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Fractions.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Google.Protobuf.dll
@@ -47,8 +52,11 @@ C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Microsoft.VisualStudio.Validation.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Nerdbank.Streams.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Npgsql.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Polly.Core.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Semver.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\StackExchange.Redis.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\StreamJsonRpc.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\System.IO.Hashing.dll
@@ -111,6 +119,7 @@ C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.AssemblyInfoInputs.cache
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.AssemblyInfo.cs
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Aspire\references\Tienda_Identity.ProjectMetadata.g.cs
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Aspire\references\_AppHost.ProjectMetadata.g.cs
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.sourcelink.json
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.csproj.Up2Date
@@ -119,12 +128,3 @@ C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.pdb
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Tienda.genruntimeconfig.cache
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\ref\Tienda.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net8.0\Aspire\references\Tienda_Identity.ProjectMetadata.g.cs
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.PostgreSQL.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.NpgSql.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Npgsql.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.Redis.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.Redis.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\StackExchange.Redis.dll
-C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.NodeJs.dll
