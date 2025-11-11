@@ -53,19 +53,27 @@
           "dependencies": {
             "Aspire.Dashboard.Sdk.win-x64": {
               "target": "Package",
-              "version": "[9.5.0, )",
+              "version": "[9.5.2, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.AppHost": {
               "target": "Package",
-              "version": "[9.5.0, )"
+              "version": "[9.5.2, )"
+            },
+            "Aspire.Hosting.NodeJs": {
+              "target": "Package",
+              "version": "[9.5.2, )"
             },
             "Aspire.Hosting.Orchestration.win-x64": {
               "target": "Package",
-              "version": "[9.5.0, )",
+              "version": "[9.5.2, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.5.2, )"
+            },
+            "Aspire.Hosting.Redis": {
               "target": "Package",
               "version": "[9.5.2, )"
             }

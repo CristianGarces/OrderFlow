@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 		docker-compose.yaml = docker-compose.yaml
 	EndProjectSection
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Tienda.react", "Tienda.React\Tienda.react.esproj", "{0B30A325-F668-F755-1737-0AB653CB3E41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,12 @@ Global
 		{7084A413-CA24-BD9A-7749-86A523C5F1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7084A413-CA24-BD9A-7749-86A523C5F1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7084A413-CA24-BD9A-7749-86A523C5F1CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B30A325-F668-F755-1737-0AB653CB3E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B30A325-F668-F755-1737-0AB653CB3E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B30A325-F668-F755-1737-0AB653CB3E41}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0B30A325-F668-F755-1737-0AB653CB3E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B30A325-F668-F755-1737-0AB653CB3E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B30A325-F668-F755-1737-0AB653CB3E41}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

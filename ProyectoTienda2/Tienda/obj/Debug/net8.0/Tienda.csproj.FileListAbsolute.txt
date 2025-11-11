@@ -123,3 +123,8 @@ C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\obj\Debug\net
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.PostgreSQL.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.NpgSql.dll
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Npgsql.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.Redis.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\HealthChecks.Redis.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\StackExchange.Redis.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda\bin\Debug\net8.0\Aspire.Hosting.NodeJs.dll
