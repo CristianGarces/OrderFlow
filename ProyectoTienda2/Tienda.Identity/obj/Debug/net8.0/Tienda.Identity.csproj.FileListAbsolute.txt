@@ -143,3 +143,4 @@ C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda.Identity\obj\
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda.Identity\obj\Debug\net8.0\Tienda.Identity.pdb
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda.Identity\obj\Debug\net8.0\Tienda.Identity.genruntimeconfig.cache
 C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda.Identity\obj\Debug\net8.0\ref\Tienda.Identity.dll
+C:\Users\USUARIO\Documents\GitHub\OrderFlow\ProyectoTienda2\Tienda.Identity\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

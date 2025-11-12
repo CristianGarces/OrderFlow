@@ -3,7 +3,7 @@ using Aspire.Hosting;
 var builder = DistributedApplication.CreateBuilder(args);
 
 // Para la base de datos postgres
-var postgres = builder.AddPostgres("postgres").WithLifetime(ContainerLifetime.Persistent).WithHostPort(61457);
+var postgres = builder.AddPostgres("postgres").WithLifetime(ContainerLifetime.Persistent).WithHostPort(49729);
 var postgresdb = postgres.AddDatabase("identityDb");
 
 // Agregar tu proyecto Identity
