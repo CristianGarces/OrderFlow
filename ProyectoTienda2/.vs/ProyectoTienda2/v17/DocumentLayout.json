@@ -64,8 +64,12 @@
         },
         {
           "DockedWidth": 320,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -76,8 +80,7 @@
               "RelativeToolTip": "Tienda.Identity\\Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:29:56.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T16:29:56.008Z"
             },
             {
               "$type": "Document",
@@ -89,8 +92,7 @@
               "RelativeToolTip": "Tienda.Identity\\Dto\\UserDtos.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwAsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T15:57:05.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T15:57:05.465Z"
             },
             {
               "$type": "Document",
@@ -115,8 +117,7 @@
               "RelativeToolTip": "Tienda.Identity\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T18:44:41.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T18:44:41.426Z"
             },
             {
               "$type": "Document",
@@ -128,8 +129,7 @@
               "RelativeToolTip": "Tienda.Identity\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-13T14:51:45.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T14:51:45.088Z"
             },
             {
               "$type": "Document",
@@ -141,8 +141,7 @@
               "RelativeToolTip": "tienda.react\\src\\components\\LoginForm.tsx",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-11-12T17:22:24.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T17:22:24.952Z"
             },
             {
               "$type": "Document",
@@ -154,8 +153,7 @@
               "RelativeToolTip": "Tienda.Identity\\Data\\IdentityDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:47:20.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T14:47:20.119Z"
             },
             {
               "$type": "Document",
@@ -167,8 +165,7 @@
               "RelativeToolTip": "Tienda\\AppHost.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAADgvwkAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:48:32.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T14:48:32.343Z"
             },
             {
               "$type": "Document",
@@ -180,8 +177,7 @@
               "RelativeToolTip": "Tienda.Identity\\Data\\IdentityDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:48:11.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T14:48:11.5Z"
             },
             {
               "$type": "Document",
@@ -193,8 +189,7 @@
               "RelativeToolTip": "tienda.react\\src\\components\\RegisterForm.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-11-12T16:52:36.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T16:52:36.176Z"
             }
           ]
         }
