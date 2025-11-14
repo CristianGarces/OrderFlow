@@ -61,7 +61,7 @@ namespace Tienda.Identity.Controllers
                 return BadRequest(new UserResponse()
                 {
                     Email = email,
-                    Message = "User not found"
+                    Message = "User not found",
                 });
             }
 
@@ -70,6 +70,42 @@ namespace Tienda.Identity.Controllers
             {
                 Email = email,
                 Message = "User retrieved succesfully"
+            });
+        }
+
+        [HttpDelete("{email}")]
+        public async Task<ActionResult<UserResponse>> DeleteUser(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            
+            if (user == null)
+            {
+                _logger.LogWarning("User not found {Email}", email);
+                return BadRequest(new UserResponse()
+                {
+                    Email = email,
+                    Message = "User not found"
+                });
+            }
+
+            var result = await _userManager.DeleteAsync(user);
+
+            if (!result.Succeeded)
+            {
+                _logger.LogError("Error deleting user {Email}", email);
+                return BadRequest(new UserResponse()
+                {
+                    Email = email,
+                    Message = "Error deleting user",
+                    Errors = result.Errors.Select(e => e.Description)
+                });
+            }
+
+            _logger.LogInformation("User deleted succesfully {Email}", email);
+            return Ok(new UserResponse()
+            {
+                Email = email,
+                Message = "User deleted succesfully"
             });
         }
     }
