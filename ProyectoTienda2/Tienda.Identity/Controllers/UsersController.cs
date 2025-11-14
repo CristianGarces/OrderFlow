@@ -73,11 +73,54 @@ namespace Tienda.Identity.Controllers
             });
         }
 
+        // TODO: Creo que la contraseña no se actualiza
+        [HttpPut ("{email}")]
+        public async Task <ActionResult<UserResponse>> UpdateUser(string email, UserRequest request)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                _logger.LogWarning("User not found {Email}", email);
+                return BadRequest(new UserResponse
+                {
+                    Email = email,
+                    Message = "User not found"
+                });
+            }
+
+            user.UserName = request.UserName;
+            user.Email = request.Email;
+
+            var result = await _userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                _logger.LogWarning("Error updating user {Email}: {Error}", email,
+                    string.Join(", ", result.Errors.Select(e => e.Description)));
+
+                return BadRequest(new UserResponse()
+                {
+                    Email = email,
+                    Message = "Error updating user",
+                    Errors = result.Errors.Select(e => e.Description)
+                });
+            }
+
+            _logger.LogInformation("User updated successfully {Email}", email);
+
+            return Ok(new UserResponse()
+            {
+                Email = request.Email,
+                Message = "User updated successfully"
+            });
+        }
+
         [HttpDelete("{email}")]
         public async Task<ActionResult<UserResponse>> DeleteUser(string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
-            
+
             if (user == null)
             {
                 _logger.LogWarning("User not found {Email}", email);
@@ -92,7 +135,8 @@ namespace Tienda.Identity.Controllers
 
             if (!result.Succeeded)
             {
-                _logger.LogError("Error deleting user {Email}", email);
+                _logger.LogError("Error deleting user {Email}: {Error}", email,
+                    string.Join(", ", result.Errors.Select(e => e.Description)));
                 return BadRequest(new UserResponse()
                 {
                     Email = email,
