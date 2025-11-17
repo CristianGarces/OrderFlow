@@ -1,59 +1,95 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Tienda.Identity.Models;
+using Tienda.Identity.Dto;
+using Tienda.Identity.Services;
 
-namespace Tienda.Identity.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class AuthController : ControllerBase
+namespace Tienda.Identity.Controllers
 {
-    private readonly UserManager<IdentityUser> _userManager;
-
-    public AuthController(UserManager<IdentityUser> userManager)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AuthController : ControllerBase
     {
-        _userManager = userManager;
-    }
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly JwtService _jwtService;
+        private readonly ILogger<AuthController> _logger;
 
-    [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterDto model)
-    {
-        if (model.Password != model.ConfirmPassword)
+        public AuthController(
+            UserManager<IdentityUser> userManager,
+            JwtService jwtService,
+            ILogger<AuthController> logger)
         {
-            return BadRequest("Passwords don't match");
+            _userManager = userManager;
+            _jwtService = jwtService;
+            _logger = logger;
         }
 
-        var user = new IdentityUser
+        [HttpPost("register")]
+        public async Task<ActionResult<AuthResponse>> Register(UserRequest request)
         {
-            UserName = model.Email,
-            Email = model.Email
-        };
+            var user = new IdentityUser
+            {
+                UserName = request.UserName,
+                Email = request.Email
+            };
 
-        var result = await _userManager.CreateAsync(user, model.Password);
+            var result = await _userManager.CreateAsync(user, request.Password);
 
-        if (result.Succeeded)
-        {
-            return Ok(new { Message = "User created successfully" });
+            if (!result.Succeeded)
+            {
+                _logger.LogError("Error registrando usuario: {Error}",
+                    string.Join(", ", result.Errors.Select(e => e.Description)));
+
+                return BadRequest(new AuthResponse
+                {
+                    Success = false,
+                    Message = "Error registrando usuario: " +
+                             string.Join(", ", result.Errors.Select(e => e.Description))
+                });
+            }
+
+            var token = await _jwtService.GenerateToken(user);
+
+            _logger.LogInformation("Usuario registrado exitosamente: {Email}", request.Email);
+
+            return Ok(new AuthResponse
+            {
+                Success = true,
+                Token = token,
+                Email = user.Email!,
+                UserName = user.UserName!,
+                Expiration = DateTime.Now.AddMinutes(60),
+                Message = "Usuario registrado exitosamente"
+            });
         }
 
-        return BadRequest(result.Errors);
-    }
-
-    [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] LoginDto model)
-    {
-        var user = await _userManager.FindByEmailAsync(model.Email);
-        if (user == null)
+        [HttpPost("login")]
+        public async Task<ActionResult<AuthResponse>> Login(LoginRequest request)
         {
-            return Unauthorized("Invalid credentials");
-        }
+            var user = await _userManager.FindByEmailAsync(request.Email);
 
-        var result = await _userManager.CheckPasswordAsync(user, model.Password);
-        if (!result)
-        {
-            return Unauthorized("Invalid credentials");
-        }
+            if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password))
+            {
+                _logger.LogWarning("Intento de login fallido para: {Email}", request.Email);
+                return Unauthorized(new AuthResponse
+                {
+                    Success = false,
+                    Message = "Email o contraseña incorrectos"
+                });
+            }
 
-        return Ok(new { Message = "Login successful" });
+            var token = await _jwtService.GenerateToken(user);
+
+            _logger.LogInformation("Login exitoso para: {Email}", request.Email);
+
+            return Ok(new AuthResponse
+            {
+                Success = true,
+                Token = token,
+                Email = user.Email!,
+                UserName = user.UserName!,
+                Expiration = DateTime.Now.AddMinutes(60),
+                Message = "Login exitoso"
+            });
+        }
     }
 }

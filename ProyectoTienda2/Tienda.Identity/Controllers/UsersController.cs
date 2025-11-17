@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Tienda.Identity.Dto;
 
@@ -6,6 +7,7 @@ namespace Tienda.Identity.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UsersController : ControllerBase
     {
         private readonly ILogger<UsersController> _logger;
@@ -48,6 +50,28 @@ namespace Tienda.Identity.Controllers
                 Email = request.Email,
                 Message = "User created successfully"
             });
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<UserResponse>>> GetAll()
+        {
+            var users = _userManager.Users.ToList();
+
+            if (users == null || !users.Any())
+            {
+                _logger.LogWarning("No users found");
+                return Ok(new List<UserResponse>());
+            }
+
+            var response = users.Select(u => new UserResponse
+            {
+                Email = u.Email,
+                Message = "User retrieved successfully"
+            });
+
+            _logger.LogInformation("Retrieved {Count} users", users.Count);
+
+            return Ok(response);
         }
 
         [HttpGet("{email}")]
