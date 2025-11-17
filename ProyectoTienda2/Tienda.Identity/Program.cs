@@ -2,13 +2,15 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.Text;
 using Tienda.Identity.Data;
 using Tienda.Identity.Extensions;
 using Tienda.Identity.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Aspire defaults (service discovery, health checks, OpenTelemetry)
+builder.AddServiceDefaults();
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -66,10 +68,17 @@ if (app.Environment.IsDevelopment())
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     await context.Database.MigrateAsync();
 }
+
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
+
+// Authentication antes de Authorization
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Map health checks endpoints 
+app.MapDefaultEndpoints();
+
 app.MapControllers();
 
 app.Run();
