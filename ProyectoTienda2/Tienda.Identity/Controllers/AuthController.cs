@@ -48,22 +48,12 @@ namespace Tienda.Identity.Controllers
                 });
             }
 
-            var roleToAssign = string.IsNullOrWhiteSpace(request.Role) ? Roles.Member : request.Role;
-            var roleAssignResult = await _userManager.AddToRoleAsync(user, roleToAssign);
+            // Rol Member por defecto
+            var roleAssignResult = await _userManager.AddToRoleAsync(user, "Member");
             if (!roleAssignResult.Succeeded)
             {
-                // Borra al usuario si da error al asignar rol
-                await _userManager.DeleteAsync(user);
-
-                _logger.LogError("Error asignando rol al usuario: {Error}",
+                _logger.LogWarning("User registered but failed to assign Member role: {Error}",
                     string.Join(", ", roleAssignResult.Errors.Select(e => e.Description)));
-
-                return BadRequest(new AuthResponse
-                {
-                    Success = false,
-                    Message = "Error asignando rol: " +
-                              string.Join(", ", roleAssignResult.Errors.Select(e => e.Description))
-                });
             }
 
             var token = await _jwtService.GenerateToken(user);
