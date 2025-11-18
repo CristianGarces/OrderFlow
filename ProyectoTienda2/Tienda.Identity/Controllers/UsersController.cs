@@ -63,11 +63,18 @@ namespace Tienda.Identity.Controllers
                 return Ok(new List<UserResponse>());
             }
 
-            var response = users.Select(u => new UserResponse
+            var response = new List <UserResponse>();
+
+            foreach (var u in users)
             {
-                Email = u.Email,
-                Message = "User retrieved successfully"
-            });
+                var roles = await _userManager.GetRolesAsync(u);
+                response.Add(new UserResponse
+                {
+                    Email = u.Email,
+                    Message = "User retrieved successfully",
+                    Roles = roles
+                });
+            }
 
             _logger.LogInformation("Retrieved {Count} users", users.Count);
 
@@ -89,11 +96,13 @@ namespace Tienda.Identity.Controllers
                 });
             }
 
+            var role = await _userManager.GetRolesAsync(user);
             _logger.LogInformation("User retrieved succesfully {Email}", email);
             return Ok(new UserResponse()
             {
                 Email = email,
-                Message = "User retrieved succesfully"
+                Message = "User retrieved succesfully",
+                Roles = role
             });
         }
 

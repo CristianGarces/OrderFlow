@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Tienda.Identity.Data;
 using Tienda.Identity.Dto;
 using Tienda.Identity.Services;
 
@@ -44,6 +45,24 @@ namespace Tienda.Identity.Controllers
                     Success = false,
                     Message = "Error registrando usuario: " +
                              string.Join(", ", result.Errors.Select(e => e.Description))
+                });
+            }
+
+            var roleToAssign = string.IsNullOrWhiteSpace(request.Role) ? Roles.Member : request.Role;
+            var roleAssignResult = await _userManager.AddToRoleAsync(user, roleToAssign);
+            if (!roleAssignResult.Succeeded)
+            {
+                // Borra al usuario si da error al asignar rol
+                await _userManager.DeleteAsync(user);
+
+                _logger.LogError("Error asignando rol al usuario: {Error}",
+                    string.Join(", ", roleAssignResult.Errors.Select(e => e.Description)));
+
+                return BadRequest(new AuthResponse
+                {
+                    Success = false,
+                    Message = "Error asignando rol: " +
+                              string.Join(", ", roleAssignResult.Errors.Select(e => e.Description))
                 });
             }
 
