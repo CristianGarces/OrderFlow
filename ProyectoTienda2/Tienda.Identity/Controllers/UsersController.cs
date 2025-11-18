@@ -43,6 +43,20 @@ namespace Tienda.Identity.Controllers
                 });
             }
 
+            // Asignar Rol Member por defecto
+            var roleResult = await _userManager.AddToRoleAsync(user, "Member");
+
+            var assignedRoles = new List<string>();
+            if (roleResult.Succeeded)
+            {
+                assignedRoles.Add("Member");
+            }
+            else
+            {
+                _logger.LogWarning("User created but failed to assign Member role: {Error}",
+                    string.Join(", ", roleResult.Errors.Select(e => e.Description)));
+            }
+
             _logger.LogInformation("User created succesfully: {Email}", request.Email);
 
             return Ok(new UserResponse
@@ -71,8 +85,7 @@ namespace Tienda.Identity.Controllers
                 response.Add(new UserResponse
                 {
                     Email = u.Email,
-                    Message = "User retrieved successfully",
-                    Roles = roles
+                    Message = "User retrieved successfully"
                 });
             }
 
@@ -102,13 +115,11 @@ namespace Tienda.Identity.Controllers
             {
                 Email = email,
                 Message = "User retrieved succesfully",
-                Roles = role
             });
         }
 
-        // TODO: Creo que la contraseña no se actualiza
         [HttpPut ("{email}")]
-        public async Task <ActionResult<UserResponse>> UpdateUser(string email, UserRequest request)
+        public async Task <ActionResult<UserResponse>> UpdateUser(string email, UserUpdateRequest request)
         {
             var user = await _userManager.FindByEmailAsync(email);
 
@@ -123,7 +134,6 @@ namespace Tienda.Identity.Controllers
             }
 
             user.UserName = request.UserName;
-            user.Email = request.Email;
 
             var result = await _userManager.UpdateAsync(user);
 
@@ -144,45 +154,8 @@ namespace Tienda.Identity.Controllers
 
             return Ok(new UserResponse()
             {
-                Email = request.Email,
-                Message = "User updated successfully"
-            });
-        }
-
-        [HttpDelete("{email}")]
-        public async Task<ActionResult<UserResponse>> DeleteUser(string email)
-        {
-            var user = await _userManager.FindByEmailAsync(email);
-
-            if (user == null)
-            {
-                _logger.LogWarning("User not found {Email}", email);
-                return BadRequest(new UserResponse()
-                {
-                    Email = email,
-                    Message = "User not found"
-                });
-            }
-
-            var result = await _userManager.DeleteAsync(user);
-
-            if (!result.Succeeded)
-            {
-                _logger.LogError("Error deleting user {Email}: {Error}", email,
-                    string.Join(", ", result.Errors.Select(e => e.Description)));
-                return BadRequest(new UserResponse()
-                {
-                    Email = email,
-                    Message = "Error deleting user",
-                    Errors = result.Errors.Select(e => e.Description)
-                });
-            }
-
-            _logger.LogInformation("User deleted succesfully {Email}", email);
-            return Ok(new UserResponse()
-            {
                 Email = email,
-                Message = "User deleted succesfully"
+                Message = "User updated successfully"
             });
         }
     }
